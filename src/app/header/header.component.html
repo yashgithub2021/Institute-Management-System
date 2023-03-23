@@ -1,0 +1,13 @@
+<mat-toolbar color="warn" style="height: 75px;" *ngIf="_route.url != '/' && _route.url != '/login'">
+  <mat-toolbar-row *ngIf="_route.url != '/' && _route.url != '/login'">
+    <div>
+
+      <h1 routerLink="enrollment">Institute Management System</h1>
+    </div>
+    <div>
+
+      <h3> Welcome <b>{{getUsername()}} {{getAdminname()}}</b>
+      </h3>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

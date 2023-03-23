@@ -1,0 +1,192 @@
+{
+  "employees": [
+    {
+      "id": 1132200102,
+      "Name": "Rehan Shaikh",
+      "Email": "rs@gmail.com",
+      "Contact": "9846123012",
+      "College_Name": "Christ",
+      "Qualification": "B.Com",
+      "Specialization": "Maths",
+      "Experience": "1-3 Years",
+      "City_Name": "Mumbai",
+      "Course": "Python"
+    },
+    {
+      "Name": "Akshay",
+      "Email": "abc@gmail.com",
+      "Contact": "8446460581",
+      "College_Name": "AISSMS",
+      "Qualification": "B.Com",
+      "Specialization": "Other",
+      "Experience": "1-3 Years",
+      "City_Name": "Mumbai",
+      "Course": "Android Development",
+      "id": 1132200103
+    },
+    {
+      "id": 1132200105,
+      "Name": "Yash Barge",
+      "Email": "yashbarge007@gmail.com",
+      "Contact": "9403188321",
+      "College_Name": "MIT WPU",
+      "Qualification": "BCA",
+      "Specialization": "Computer Science",
+      "Experience": "1-3 Years",
+      "City_Name": "Pune",
+      "Course": "Android Development"
+    },
+    {
+      "id": 1132200106,
+      "Name": "Vedant",
+      "Email": "vedant@gmail.com",
+      "Contact": "7894365123",
+      "College_Name": "MIT ADT",
+      "Qualification": "MCA",
+      "Specialization": "Science",
+      "Passing_Year": "2019",
+      "Experience": "3-5 Years",
+      "City_Name": "Pandharpur",
+      "Course": "Android Development"
+    },
+    {
+      "Name": "Ajinkya Shinde",
+      "Email": "aj@gmail.com",
+      "Contact": "7945312845",
+      "College_Name": "Shivaji University",
+      "Qualification": "BSC",
+      "Specialization": "Science",
+      "Passing_Year": "2021",
+      "Experience": "0-1 Years",
+      "City_Name": "Delhi",
+      "Course": "Java",
+      "id": 1132200108
+    }
+  ],
+  "institutes": [
+    {
+      "id": 1001,
+      "Branch_Name": "Vishrantwadi",
+      "Contact": "020-561251455",
+      "City": "Pune"
+    },
+    {
+      "id": 1002,
+      "Branch_Name": "Viman Nagar",
+      "Contact": "020-874655132",
+      "City": "Pune"
+    },
+    {
+      "Branch_Name": "Camp",
+      "Contact": "020-57954615",
+      "City": "Pune",
+      "id": 1003
+    },
+    {
+      "Branch_Name": "Pimpri-Chinchwad",
+      "Contact": "020-564897651",
+      "City": "PCMC",
+      "id": 1004
+    },
+    {
+      "Branch_Name": "ShivajiNagar",
+      "Contact": "020-84512845",
+      "City": "Pune",
+      "id": 1005
+    },
+    {
+      "Branch_Name": "Wai",
+      "Contact": "020-8945132556",
+      "City": "Satara",
+      "id": 1006
+    },
+    {
+      "id": 1007,
+      "Branch_Name": "Loni",
+      "Contact": "745132056",
+      "City": "Solapur"
+    }
+  ],
+  "courses": [
+    {
+      "id": 101,
+      "Course_Name": "Python",
+      "Duration": "1 Month",
+      "Fees": 5000
+    },
+    {
+      "Course_Name": "React",
+      "Duration": "3 Months",
+      "Fees": 12000,
+      "id": 102
+    },
+    {
+      "Course_Name": "Android Development",
+      "Duration": "6 Months",
+      "Fees": 20000,
+      "id": 103
+    },
+    {
+      "Course_Name": "C++",
+      "Duration": "2 Months",
+      "Fees": 10000,
+      "id": 104
+    },
+    {
+      "Course_Name": "Java",
+      "Duration": "2 Months",
+      "Fees": 5000,
+      "id": 105
+    },
+    {
+      "Course_Name": "Angular",
+      "Duration": "3 Months",
+      "Fees": 17000,
+      "id": 106
+    }
+  ],
+  "batch": [
+    {
+      "id": 1,
+      "Course_Name": "Android Development",
+      "Availability": "AVAILABLE",
+      "Duration": "3Hrs",
+      "Timing": "9am - 11am"
+    },
+    {
+      "id": 2,
+      "Course_Name": "Python",
+      "Availability": "AVAILABLE",
+      "Duration": "3Hrs",
+      "Timing": "11am - 1pm"
+    }
+  ],
+  "users": [
+    {
+      "id": 11322001,
+      "username": "Yash001",
+      "password": "yash@2022",
+      "Contact": 9403188321,
+      "Email": "yashbarge007@gmail.com"
+    },
+    {
+      "username": "Kaushal",
+      "Email": "kaushal2022@gmail.com",
+      "Contact": "7896453120",
+      "password": "kaushal2013",
+      "id": 11322002
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "username": "Admin",
+      "password": "Admin@1234"
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "administrator"
+    }
+  ]
+}

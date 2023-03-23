@@ -1,0 +1,75 @@
+<section class=" gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">Update Form</h1>
+                        <form #frmData="ngForm" class="example-form" (ngSubmit)="editEmp(frmData.value)">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <mat-form-field class="example-full-width" appearance="fill">
+                                        <mat-label>Full name</mat-label>
+                                        <input name="name" [ngModel]="empObj?.username" placeholder="Ex. John" matInput>
+                                    </mat-form-field>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <mat-form-field class="example-full-width" appearance="fill">
+                                        <mat-label>Telephone</mat-label>
+                                        <span matPrefix>+1 &nbsp;</span>
+                                        <input [ngModel]="empObj?.Contact" name="contact" type="tel" matInput placeholder="555-555-1234">
+                                        <mat-icon matSuffix>phone</mat-icon>
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+
+
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label>Email</mat-label>
+                                    <input [ngModel]="empObj?.Email" name="email" type="email" matInput placeholder="Ex. pat@example.com">
+                                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Please enter a valid email address
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Email is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Enter your password</mat-label>
+                                        <input [ngModel]="empObj?.password" name="password" matInput [type]="hide ? 'text' : 'text'">
+
+                                    </mat-form-field>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-success">Update User</button>
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

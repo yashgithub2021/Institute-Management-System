@@ -1,0 +1,176 @@
+<section class=" gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h1>
+                        <form #frmData="ngForm" (ngSubmit)="addData(frmData.value)">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <mat-form-field class="example-full-width" appearance="fill">
+                                        <mat-label>Full name</mat-label>
+                                        <input name="name" ngModel placeholder="Ex. John" matInput>
+                                    </mat-form-field>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <mat-form-field class="example-full-width" appearance="fill">
+                                        <mat-label>Telephone</mat-label>
+                                        <span matPrefix>+1 &nbsp;</span>
+                                        <input ngModel name="contact" type="tel" matInput placeholder="555-555-1234">
+                                        <mat-icon matSuffix>phone</mat-icon>
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                    <mat-form-field class="example-full-width" appearance="fill">
+                                        <mat-label>Email</mat-label>
+                                        <input ngModel name="email" type="email" matInput placeholder="Ex. pat@example.com">
+                                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                            Please enter a valid email address
+                                        </mat-error>
+                                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                                            Email is <strong>required</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <mat-form-field class="example-full-width" appearance="fill">
+                                        <mat-label>College name</mat-label>
+                                        <input name="clgname" ngModel placeholder="Ex. John" matInput>
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 pb-2">
+
+                                    <div class="col-12">
+
+                                        <select ngModel name="qualify" class="select form-control-lg">
+                                            <option selected disabled>Choose option</option>
+                                            <option *ngFor="let qualify of qualification">{{qualify}}
+                                            <option>
+                                        </select>
+                                        <label class="form-label select-label">Qualification</label>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4 pb-2">
+                                    <div class="col-12">
+
+                                        <select ngModel name="specialize" class="select form-control-lg">
+                                            <option value="1" selected disabled>Choose option</option>
+                                            <option *ngFor="let special of specialization" (value)="specialization">
+                                                {{special}}</option>
+                                        </select>
+                                        <label class="form-label select-label">Specialization</label>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="col-md-6 mb-4">
+
+                                        <h4 class="mb-2 pb-1">Appearing? </h4>
+
+                                        <div class="form-check form-check-inline">
+                                            <input [(ngModel)]="isVisible" class="form-check-input" type="radio" name="isVisible" id="yes" [value]="0" [checked]="isSelected" />
+                                            <label class="form-check-label" for="yes">YES</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input [(ngModel)]="isVisible" class="form-check-input" type="radio" name="isVisible" id="no" [value]="1" [checked]="!isSelected" />
+                                            <label class="form-check-label" for="no">NO</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline" *ngIf="isVisible==1">
+                                        <select ngModel name="passingyear" class="select form-control-lg">
+                                            <option value="1" selected disabled>Choose option</option>
+                                            <option *ngFor="let year of yearOfpass " (value)="yearOfpass">{{year}}
+                                            </option>
+                                        </select>
+                                        <label class="form-label" for="lastName">Year Of Passing</label>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <select ngModel name="exp" class="select form-control-lg">
+                                                <option value="1" selected disabled>Choose option</option>
+                                                <option *ngFor="let exp of experience " (value)="experience">{{exp}}
+                                                </option>
+                                            </select>
+                                            <label class="form-label" for="lastName">Experience</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <mat-form-field class="example-full-width" appearance="fill">
+                                            <mat-label>City name</mat-label>
+                                            <input name="cityname" ngModel placeholder="Ex. Delhi" matInput>
+                                        </mat-form-field>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <select ngModel name="course" class="select form-control-lg">
+                                                <option value="1" selected disabled>Choose option</option>
+                                                <option *ngFor="let cour of course " (value)="course">{{cour}}</option>
+                                            </select>
+                                            <label class="form-label" for="lastName">Course</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="col-sm-6">
+                                <button class="btn btn-success" type="submit"><i
+                                        class="material-icons">&#xE147;</i><span>Add New Employee</span></button>
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,69 @@
+<section class=" gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h1>
+                        <form #frmData="ngForm" (ngSubmit)="addData(frmData.value)">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="col-12">
+
+                                        <select ngModel name="coursename" class="select form-control-lg">
+                              <option  selected disabled>Choose option</option> 
+                              <option *ngFor="let cour of course">{{cour}}<option>
+                            </select>
+                                        <label class="form-label select-label">Courses</label>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="col-12">
+
+                                        <select ngModel name="duration" class="select form-control-lg">
+                              <option  selected disabled>Choose option</option> 
+                              <option *ngFor="let dur of duration">{{dur}}<option>
+                            </select>
+                                        <label class="form-label select-label">Duration</label>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                    <div class="form-outline">
+                                        <input ngModel name="fees" type="number" id="city" class="form-control form-control-lg" />
+                                        <label class="form-label" for="fees">Fees</label>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+                            <div class="col-sm-6">
+                                <button class="btn btn-success" type="submit"><i class="material-icons">&#xE147;</i><span>Add Course</span></button>
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

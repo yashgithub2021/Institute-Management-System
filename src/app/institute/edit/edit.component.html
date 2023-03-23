@@ -1,0 +1,66 @@
+<section class=" gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">Updation Form</h1>
+                        <form #frmData="ngForm" (ngSubmit)="editInst(frmData.value)">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        <input [ngModel]="instObj?.Branch_Name" name="branchname" type="name" id="name" class="form-control form-control-lg" />
+                                        <label class="form-label" for="fullname">Branch Name</label>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        <input [ngModel]="instObj?.Contact" name="contact" type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                                        <label class="form-label" for="phoneNumber">Contact</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                    <div class="form-outline">
+                                        <input [ngModel]="instObj?.City" name="cityname" type="text" id="city" class="form-control form-control-lg" />
+                                        <label class="form-label" for="cityname">City</label>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+                            <div class="col-sm-6">
+                                <button class="btn btn-success" type="submit"><i
+                                        class="material-icons">&#xE147;</i><span>Update Institute</span></button>
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
