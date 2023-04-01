@@ -6,35 +6,35 @@ import { Injectable } from '@angular/core';
 })
 export class BatchService {
 
-  BatchUrl:string="http://localhost:3000/batch"
+  BatchUrl: string = "https://ims-database.onrender.com/batch"
 
 
-  constructor(private _http:HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
-  getRecord(){
+  getRecord() {
     return this._http.get(this.BatchUrl);
   }
 
   // To Add a record in Database
-  addRecord(BatchObj:any){
-    return this._http.post(this.BatchUrl,BatchObj)
+  addRecord(BatchObj: any) {
+    return this._http.post(this.BatchUrl, BatchObj)
   }
 
 
   //To Delete a record 
-  deleteRecord(id:any){
+  deleteRecord(id: any) {
     const baseurl = `${this.BatchUrl}/${id}`;
     return this._http.delete(baseurl);
   }
 
-  getsingleRec(id:any){
+  getsingleRec(id: any) {
     const baseUrl = `${this.BatchUrl}/${id}`;
     return this._http.get(baseUrl)
   }
 
   // Update Record in database
-  updateRecord(BatchObj:any){
+  updateRecord(BatchObj: any) {
     const baseurl = `${this.BatchUrl}/${BatchObj.id}`;
-    return this._http.put(baseurl,BatchObj)
+    return this._http.put(baseurl, BatchObj)
   }
 }

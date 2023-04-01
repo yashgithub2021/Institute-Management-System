@@ -6,16 +6,16 @@ import { HttpClient } from '@angular/common/http'
 })
 export class DatabaseService {
 
-  url: string = "http://localhost:3000/employees"
-  newurl = "http://localhost:3000/employees"
-  empUrl: string = "http://localhost:3000/users"
-  adminUrl: string = "http://localhost:3000/admin"
+  url: string = "https://ims-database.onrender.com/employees"
+  newurl = "https://ims-database.onrender.com/employees"
+  empUrl: string = "https://ims-database.onrender.com/users"
+  adminUrl: string = "https://ims-database.onrender.com/admin"
 
   constructor(private _http: HttpClient) { }
 
 
   length() {
-    this._http.get(this.newurl).subscribe((len)=>{
+    this._http.get(this.newurl).subscribe((len) => {
       length = Object.keys(len).length;
       console.log(length)
     })

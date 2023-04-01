@@ -6,39 +6,39 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InstituteService {
 
-  instituteUrl:string="http://localhost:3000/institutes"
+  instituteUrl: string = "https://ims-database.onrender.com/institutes"
 
 
-  constructor(private _http:HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
   //To get record from Database
-  getRecord(){
+  getRecord() {
     return this._http.get(this.instituteUrl);
   }
 
   // To Add a record in Database
-  addRecord(instObj:any){
-    return this._http.post(this.instituteUrl,instObj)
+  addRecord(instObj: any) {
+    return this._http.post(this.instituteUrl, instObj)
   }
 
   // Delete a record from Database
-  deleteRecord(id:any){
+  deleteRecord(id: any) {
     const baseurl = `${this.instituteUrl}/${id}`;
     return this._http.delete(baseurl);
   }
 
   // Get single record from database
 
-  getsingleRec(id:any){
+  getsingleRec(id: any) {
     const baseUrl = `${this.instituteUrl}/${id}`;
     return this._http.get(baseUrl)
   }
 
   // Update Record in database
-  updateRecord(instObj:any){
+  updateRecord(instObj: any) {
     const baseurl = `${this.instituteUrl}/${instObj.id}`;
-    return this._http.put(baseurl,instObj)
+    return this._http.put(baseurl, instObj)
   }
-  
+
 
 }

@@ -6,37 +6,37 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  AdminUrl:string="http://localhost:3000/admin"
-  UserUrl:string="http://localhost:3000/users"
+  AdminUrl: string = "https://ims-database.onrender.com/admin"
+  UserUrl: string = "https://ims-database.onrender.com/users"
 
-  constructor(private _http:HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
 
   //For Admin
-  getAdmin(){
+  getAdmin() {
     return this._http.get(this.AdminUrl)
   }
 
-  setAdmin(admin:any){
-    sessionStorage.setItem("admin",admin);
+  setAdmin(admin: any) {
+    sessionStorage.setItem("admin", admin);
   }
 
-  removeAdmin(){
+  removeAdmin() {
     sessionStorage.removeItem("admin");
   }
 
 
 
   //For Users 
-  getUser(){
+  getUser() {
     return this._http.get(this.UserUrl)
   }
 
-  setUser(user:any){
-    sessionStorage.setItem("users",user)
+  setUser(user: any) {
+    sessionStorage.setItem("users", user)
   }
 
-  removeUser(){
+  removeUser() {
     sessionStorage.removeItem("users");
-   }
+  }
 }

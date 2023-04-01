@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchData();
-    this._http.get('http://localhost:3000/employees').subscribe(data => {
+    this._http.get('https://ims-database.onrender.com/employees').subscribe(data => {
       this.jsonlen = data
     })
   }
