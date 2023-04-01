@@ -68,11 +68,9 @@ export class LoginComponent implements OnInit {
         cancelButton: 'btn btn-danger'
       },
       buttonsStyling: false
-    });
-    // console.log(this.userName,this.userPass);
+    })
     this.userSer.getUser().subscribe((res) => {
       this.Userarray = res;
-      //  console.log(this.Userarray);
       const data = this.Userarray.filter((item: any) => {
         return item.username == this.Username && item.password == this.Userpass
       })

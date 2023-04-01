@@ -34,23 +34,26 @@ export class EditComponent implements OnInit {
 
     }
 
-    this.instSer.updateRecord(instObj).subscribe(() => {
-      Swal.fire({
-        title: 'Do you want to save the changes?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: 'Save',
-        denyButtonText: `Don't save`,
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire('Saved!', '', 'success');
-          this.route.navigate(['/institute']);
 
-        } else if (result.isDenied) {
-          Swal.fire('Changes are not saved', '', 'info');
-        }
-      })
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success');
+        this.instSer.updateRecord(instObj).subscribe(() => {
+          this.route.navigate(['/institute']);
+        })
+
+
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info');
+      }
     })
+
   }
 
 }

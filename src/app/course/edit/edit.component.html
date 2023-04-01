@@ -12,9 +12,10 @@
 
                                     <div class="col-12">
 
-                                        <select [ngModel]="courseObj?.Course_Name" name="coursename" class="select form-control-lg">
+                                        <select [ngModel]="courseObj?.Course_Name" name="coursename"
+                                            class="select form-control-lg">
                                             <option selected disabled>Choose option</option>
-                                            <option *ngFor="let cour of course">{{cour}}
+                                            <option disabled *ngFor="let cour of course">{{cour}}
                                             <option>
                                         </select>
                                         <label class="form-label select-label">Courses</label>
@@ -26,7 +27,8 @@
 
                                     <div class="col-12">
 
-                                        <select [ngModel]="courseObj?.Duration" name="duration" class="select form-control-lg">
+                                        <select [ngModel]="courseObj?.Duration" name="duration"
+                                            class="select form-control-lg">
                                             <option selected disabled>Choose option</option>
                                             <option *ngFor="let dur of duration">{{dur}}
                                             <option>
@@ -42,7 +44,8 @@
                                 <div class="col-md-6 mb-4 d-flex align-items-center">
 
                                     <div class="form-outline">
-                                        <input [ngModel]="courseObj?.Fees" name="fees" type="number" id="city" class="form-control form-control-lg" />
+                                        <input [ngModel]="courseObj?.Fees" name="fees" type="number" id="city"
+                                            class="form-control form-control-lg" />
                                         <label class="form-label" for="fees">Fees</label>
                                     </div>
 

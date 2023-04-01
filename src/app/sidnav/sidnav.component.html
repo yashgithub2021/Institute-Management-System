@@ -18,7 +18,7 @@
     <a mat-list-item routerLink="batch">
         <mat-icon>access_time</mat-icon> Batch
     </a><br>
-    <a mat-list-item routerLink="user">
+    <a *ngIf="getData() == true" mat-list-item routerLink="user">
         <mat-icon>person</mat-icon> User
     </a><br>
     <a style=" margin-top:70px;" mat-list-item routerLink="">

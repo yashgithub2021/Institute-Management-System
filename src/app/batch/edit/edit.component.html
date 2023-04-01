@@ -12,10 +12,12 @@
 
                                     <div class="col-12">
 
-                                        <select [ngModel]="BatchObj?.Course_Name" name="coursename" class="select form-control-lg">
-                              <option  selected disabled>Choose option</option> 
-                              <option *ngFor="let cour of course">{{cour}}<option>
-                            </select>
+                                        <select [ngModel]="BatchObj?.Course_Name" name="coursename"
+                                            class="select form-control-lg">
+                                            <option selected disabled>Choose option</option>
+                                            <option disabled *ngFor="let cour of course">{{cour}}
+                                            <option>
+                                        </select>
                                         <label class="form-label select-label">Courses</label>
 
                                     </div>
@@ -24,10 +26,12 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="col-12">
 
-                                        <select [ngModel]="BatchObj?.Availability" name="available" class="select form-control-lg">
-                              <option  selected disabled>Choose option</option> 
-                              <option *ngFor="let available of availability">{{available}}<option>
-                            </select>
+                                        <select [ngModel]="BatchObj?.Availability" name="available"
+                                            class="select form-control-lg">
+                                            <option selected disabled>Choose option</option>
+                                            <option *ngFor="let available of availability">{{available}}
+                                            <option>
+                                        </select>
                                         <label class="form-label select-label">Availability</label>
 
                                     </div>
@@ -43,10 +47,12 @@
 
                                     <div class="col-12">
 
-                                        <select [ngModel]="BatchObj?.Duration" name="duration" class="select form-control-lg">
-                              <option  selected disabled>Choose option</option> 
-                              <option *ngFor="let dur of duration">{{dur}}<option>
-                            </select>
+                                        <select [ngModel]="BatchObj?.Duration" name="duration"
+                                            class="select form-control-lg">
+                                            <option selected disabled>Choose option</option>
+                                            <option *ngFor="let dur of duration">{{dur}}
+                                            <option>
+                                        </select>
                                         <label class="form-label select-label">Duration</label>
 
                                     </div>
@@ -55,7 +61,8 @@
                                 <div class="col-md-6 mb-4 d-flex align-items-center">
 
                                     <div class="form-outline">
-                                        <input [ngModel]="BatchObj?.Timing" name="timing" type="text" id="city" class="form-control form-control-lg" />
+                                        <input [ngModel]="BatchObj?.Timing" name="timing" type="text" id="city"
+                                            class="form-control form-control-lg" />
                                         <label class="form-label" for="fees">Timing</label>
                                     </div>
 
@@ -73,7 +80,8 @@
 
 
                             <div class="col-sm-6">
-                                <button class="btn btn-success" type="submit"><i class="material-icons">&#xE147;</i><span>Update Batch</span></button>
+                                <button class="btn btn-success" type="submit"><i
+                                        class="material-icons">&#xE147;</i><span>Update Batch</span></button>
 
 
                             </div>

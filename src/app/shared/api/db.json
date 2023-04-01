@@ -50,17 +50,16 @@
       "Course": "Android Development"
     },
     {
-      "Name": "Ajinkya Shinde",
+      "id": 1132200108,
+      "Name": "Ajinkya s",
       "Email": "aj@gmail.com",
       "Contact": "7945312845",
       "College_Name": "Shivaji University",
       "Qualification": "BSC",
       "Specialization": "Science",
-      "Passing_Year": "2021",
       "Experience": "0-1 Years",
       "City_Name": "Delhi",
-      "Course": "Java",
-      "id": 1132200108
+      "Course": "Java"
     }
   ],
   "institutes": [
@@ -89,10 +88,10 @@
       "id": 1004
     },
     {
-      "Branch_Name": "ShivajiNagar",
+      "id": 1005,
+      "Branch_Name": "Shivaji Nagar",
       "Contact": "020-84512845",
-      "City": "Pune",
-      "id": 1005
+      "City": "Pune"
     },
     {
       "Branch_Name": "Wai",
@@ -133,10 +132,10 @@
       "id": 104
     },
     {
+      "id": 105,
       "Course_Name": "Java",
-      "Duration": "2 Months",
-      "Fees": 5000,
-      "id": 105
+      "Duration": "1 Month",
+      "Fees": 5000
     },
     {
       "Course_Name": "Angular",
@@ -149,7 +148,7 @@
     {
       "id": 1,
       "Course_Name": "Android Development",
-      "Availability": "AVAILABLE",
+      "Availability": "NOT AVAILABLE!",
       "Duration": "3Hrs",
       "Timing": "9am - 11am"
     },
@@ -170,11 +169,11 @@
       "Email": "yashbarge007@gmail.com"
     },
     {
+      "id": 11322002,
       "username": "Kaushal",
       "Email": "kaushal2022@gmail.com",
-      "Contact": "7896453120",
-      "password": "kaushal2013",
-      "id": 11322002
+      "Contact": "789645350",
+      "password": "kaushal13"
     }
   ],
   "admin": [

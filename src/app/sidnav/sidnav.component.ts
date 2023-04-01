@@ -12,4 +12,12 @@ export class SidnavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getData() {
+    if (sessionStorage.getItem('admin')) {
+      return true
+    } else {
+      return false
+    }
+
+  }
 }

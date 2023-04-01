@@ -38,23 +38,24 @@ export class EditComponent implements OnInit {
 
     }
 
-    this.batchservice.updateRecord(BatchObj).subscribe(() => {
-      Swal.fire({
-        title: 'Do you want to save the changes?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: 'Save',
-        denyButtonText: `Don't save`,
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire('Saved!', '', 'success');
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success');
+        this.batchservice.updateRecord(BatchObj).subscribe(() => {
           this.route.navigate(['/batch']);
+        })
 
-        } else if (result.isDenied) {
-          Swal.fire('Changes are not saved', '', 'info');
-        }
-      })
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info');
+      }
     })
+
   }
 
 }
