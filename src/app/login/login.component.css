@@ -53,7 +53,7 @@ input {
     border-radius: 5px;
 }
 
-button {
+.button2 {
     width: 60%;
     height: 40px;
     margin: 10px auto;
@@ -71,8 +71,32 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button2:hover {
+    background: #ed2b2b;
+}
+
+
+.button1 {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
     background: #2f1f4d;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background: #1b083e;
+
 }
 
 .login {
